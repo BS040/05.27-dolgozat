@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divek</title>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <script>
+        const divek = document.querySelectorAll('body > div');
+
+        if (divek[0]) {
+            divek[0].textContent = 'Első';
+        }
+        if (divek[divek.length - 1]) {
+            divek[divek.length - 1].textContent = 'Utolsó';
+        }
+        if (divek[2]) {
+            divek[2].textContent = 'Harmadik';
+        }
+        divek.forEach((div, index) => {
+            if (div.textContent === '') {
+                div.textContent = `${index + 1}`;
+            }
+        });
+    </script>
+</body>
+</html>
